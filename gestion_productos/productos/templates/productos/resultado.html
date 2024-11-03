@@ -1,0 +1,17 @@
+<!-- productos/templates/productos/resultado.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'productos/styles.css' %}">
+</head>
+<body>
+    <h1>Operación Exitosa</h1>
+    <p>{{ mensaje }}</p>
+    <a href="{% url 'consulta_productos' %}">Ver todos los productos</a>
+</body>
+</html>
+

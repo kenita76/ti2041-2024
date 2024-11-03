@@ -1,0 +1,21 @@
+<!-- productos/templates/productos/consulta.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Productos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'productos/styles.css' %}">
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.codigo }} - {{ producto.nombre }} - {{ producto.marca }} - {{ producto.fecha_vencimiento }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'registro_producto' %}">Registrar nuevo producto</a>
+</body>
+</html>
+
